@@ -51,12 +51,12 @@ router.post( '/', [ auth, [ check( 'status', 'Status is required' ).not().isEmpt
 
     //Build social object
     profileFields.social = {}
-    if(twitter) profileFields.twitter = twitter;
-    if(youtube) profileFields.youtube = youtube;
-    if(facebook) profileFields.facebook = facebook;
-    if(linkedin) profileFields.linkedin = linkedin;
-    if(instagram) profileFields.instagram = instagram;
-    if(discord) profileFields.discord = discord;
+    if(twitter) profileFields.social.twitter = twitter;
+    if(youtube) profileFields.social.youtube = youtube;
+    if(facebook) profileFields.social.facebook = facebook;
+    if(linkedin) profileFields.social.linkedin = linkedin;
+    if(instagram) profileFields.social.instagram = instagram;
+    if(discord) profileFields.social.discord = discord;
 
     try {
         let profile = await Profile.findOne({ user: req.user.id });
