@@ -42,7 +42,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
             discord : loading || !profile.social.discord ? '' : profile.social.discord,
             youtube : loading || !profile.social.youtube ? '' : profile.social.youtube
         });
-    }, [loading]);
+    }, [loading, getCurrentProfile]);
 
     const {
         company,
